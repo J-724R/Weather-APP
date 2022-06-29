@@ -4,62 +4,62 @@ import style from './style.css';
 
 // - Your API key is 85051ca8511a9148395ef7966174f9c7
 
+// getWeatherAsync();
+console.log(`\n\n\n`);
+
+function printCoords(data){
+    console.log(" ");
+    console.log(data);
+    console.log(`
+        country: ${data[0].country} \n
+        state: ${data[0].state} \n
+        name: ${data[0].name} \n 
+        latitude: ${data[0].lat} \n 
+        longitude: ${data[0].lon}`);
+    
+}
 
 function printData(data){
+    console.log(" ");
     console.log(data);
-    console.log(data.weather[0].description);
+    console.log(`
+        country: ${data[0].country} \n
+        state: ${data[0].state} \n
+        name: ${data[0].name} \n 
+        latitude: ${data[0].lat} \n 
+        longitude: ${data[0].lon}`);
+    
 }
 
-// function getWeather (){
-//     const Key = "85051ca8511a9148395ef7966174f9c7";
-//     let lat = 80.000; //Vertical
-//     let lon = 26.700; //Horizontal
-    
-//     return fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${Key}&units=metric`)
-//         .then(response => { return response.json()})
-//         .then(response => { 
-//             printData(response);
-//         });
-// } 
-
-// getWeather();
-
-async function getWeatherAsync (){
+async function getWeather (location, country){
     const Key = "85051ca8511a9148395ef7966174f9c7";
-    let lat = 4.624; //Vertical
-    let lon = -74.0636; //Horizontal
+    let unit = "metric";
+    //get metrics
+    if (!country) {
+        country = "";
+    }
 
     try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${Key}&units=metric`);
-        const weatherData = await response.json();
-        
-        if (response.status >= 400) {
-            return weatherData;
-        }
+        const requestCoords =  await 
+            fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${location},${country}&limit=1&appid=${Key}`,
+            { method: "GET" }
+        );
+        const coords = await requestCoords.json();
+        printCoords(coords);
 
-        return printData(weatherData);
-    } catch (error) {
-        return console.log(error.name + " message: " + error.message);
-    }                     
+
+        const requestWeather = await
+            fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${coords[0].lat}&lon=${coords[0].lon}&exclude=minutely&units=${unit}&appid=${Key}`,
+            { method: "GET" }
+        );
+        const weather = await requestWeather.json();
+        printData(weather);
+                 
+
+
+    }catch(error){
+        return console.log(error);
+    }
 }
 
-// console.log(getWeatherAsync());
-
-getWeatherAsync();
-
-
-
-
-// const Key = "85051ca8511a9148395ef7966174f9c7";
-// let lat = 80.000; //Vertical
-// let lon = 26.700; //Horizontal
-
-
-
-// const data = fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${Key}&units=metric`)
-//                 .then(response => { return response.json()})
-//                 .then(response => { 
-//                      return response;
-//                 });
-
-//  printData(data);               
+getWeather('cucuta', 'co');
