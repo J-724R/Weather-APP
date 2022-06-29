@@ -1,6 +1,6 @@
-/*!******************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/layout.css ***!
-  \******************************************************************/
+/*!*********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/css/layout.css ***!
+  \*********************************************************************************/
 *{
     outline: 1px solid red;
     box-sizing: border-box;
@@ -145,6 +145,21 @@ html{
     justify-content: flex-start;
     align-items: center;
     height: 100%;
+    padding: 10px 0px;
+ }
+
+ .forecast_item{
+   display: flex;
+   width: 90%;
+   height: 40px;
+ }
+
+ .forecast_item > div {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 20%;
+   height: 100%;
  }
 
 
@@ -170,7 +185,11 @@ html{
       width: 85vw;
    }
 }
-/*!*****************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
-  \*****************************************************************/
+/*!********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/css/style.css ***!
+  \********************************************************************************/
+
+/*!****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/main.css ***!
+  \****************************************************************/
 
