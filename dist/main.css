@@ -9,7 +9,7 @@
 body, 
 html{
     margin: 0;
-    height: 100%;
+    min-height: 100%;
 }
 
 .main_container{
@@ -27,7 +27,7 @@ html{
  flex-flow: column;
  border-radius: 5px;
  overflow: hidden; 
- height: 325px;
+ min-height: 325px;
  width: max(32vw, 350px);  
 }
  
@@ -64,10 +64,11 @@ html{
  
  .main_info_container{
     display: flex;
+    flex: auto;
     justify-content: space-between;
     gap: 8px;
     padding: 6px;
-    height: 100%;
+    height: inherit;
  }
 
  .basic_info,
@@ -78,7 +79,6 @@ html{
     gap: 8px;
     justify-content: flex-start;
     align-items: center;
-    height: 100%;
     padding-top: 8px;
  }
 
@@ -117,12 +117,11 @@ html{
 /* Extra info Container */
 
 .weather_forecast{
-   width: 50vw;
+   width: 45vw;
    display: flex;
    flex-flow: column;
-   height: fit-content;
+   height: 90vh;
    border-radius: 5px;
-   overflow: hidden;
 }
  
  .forecast_options{
@@ -138,14 +137,31 @@ html{
   }
 
  .forecast_info_container{
-    display: flex;
-    flex-flow: column;
-    flex: auto;
-    gap: 8px;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-    padding: 10px 0px;
+   height: fit-content;
+   overflow: scroll;
+ }
+
+ .forecast_Header,
+ .Hourly_Container,
+ .Daily_Container {
+   display: flex;
+   flex-flow: column;
+   flex: auto;
+   gap: 8px;
+   justify-content: flex-start;
+   align-items: center;
+   height: fit-content;
+   padding: 10px 0px;
+ }
+
+ .forecast_Header{
+   /* padding-bottom: 0px; */
+   height: 40px;
+   padding-bottom: 0px;
+ }
+
+ .forecast_Header >div {
+   flex: auto;
  }
 
  .forecast_item{
@@ -162,7 +178,6 @@ html{
    height: 100%;
  }
 
-
 /* Screen Sizes */
 @media (max-width:880px){
    .main_container{
@@ -177,6 +192,7 @@ html{
 
    .weather_forecast{
       width: 90vw;
+      height: 65vh;
    }
 }
 

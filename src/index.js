@@ -7,6 +7,3 @@ weather.eventHandlers();
 
 console.log(`\n\n\n`);
 
-
-
-//fucntion processData
