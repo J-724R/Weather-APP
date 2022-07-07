@@ -1,8 +1,7 @@
-/*!*********************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/css/layout.css ***!
-  \*********************************************************************************/
+/*!*************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/layout.css ***!
+  \*************************************************************************/
 *{
-    outline: 1px solid red;
     box-sizing: border-box;
 }
 
@@ -25,7 +24,7 @@ html{
 .weather_info{
  display: flex;
  flex-flow: column;
- border-radius: 5px;
+ border-radius: 15px;
  overflow: hidden; 
  min-height: 325px;
  width: max(32vw, 350px);  
@@ -71,6 +70,11 @@ html{
     height: inherit;
  }
 
+ .weather_details_icon > img {
+      width: auto;
+   /* filter: invert(16%) sepia(72%) saturate(7426%) hue-rotate(262deg) brightness(87%) contrast(125%); */
+ }
+
  .basic_info,
  .extra_info{
     display: flex;
@@ -100,19 +104,22 @@ html{
    display: flex;
    gap: 5%;
    width: 80%;
+   max-height: 22%;
  }
 
  .weather_details_info{
    width: 100%;
-
  }
 
 /* Button */
 .extra_info_button{
 } 
 
- .extra_info_button > img {
- }
+ .extra_info_button {
+   fill: orange;
+}
+ 
+
  
 /* Extra info Container */
 
@@ -121,7 +128,8 @@ html{
    display: flex;
    flex-flow: column;
    height: 90vh;
-   border-radius: 5px;
+   border-radius: 15px;
+   overflow: hidden;
 }
  
  .forecast_options{
@@ -138,7 +146,7 @@ html{
 
  .forecast_info_container{
    height: fit-content;
-   overflow: scroll;
+   overflow-y: scroll;
  }
 
  .forecast_Header,
@@ -159,8 +167,8 @@ html{
  }
 
  .forecast_Header{
-   /* padding-bottom: 0px; */
-   height: 40px;
+   padding-bottom: 0px;
+   max-height: 40px;
    padding-bottom: 0px;
  }
 
@@ -205,11 +213,7 @@ html{
       width: 85vw;
    }
 }
-/*!********************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/css/style.css ***!
-  \********************************************************************************/
-
-/*!****************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/main.css ***!
-  \****************************************************************/
+/*!********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main.scss ***!
+  \********************************************************************************************************/
 

@@ -1,10 +1,13 @@
-import './main.css';
+import './main.scss';
 import { weather, UI } from './components/eventHandlers.js';
 import _ from 'lodash';
+// require('../src/main.scss');
+
+
+UI.toggleForecast();
+UI.changeForecast();
 
 weather.eventHandlers();
-UI.changeForecast();
-UI.toggleForecast();
 
 console.log(`\n\n\n`);
 

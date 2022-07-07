@@ -18,19 +18,18 @@ module.exports = {
             loader: "babel-loader",
           }
         },
-        {
-         test: /\.css$/i,
-        //  use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        { 
+         test: /\.(s[ac]ss||css)$/i,
          use:[
            {
-             loader: MiniCssExtractPlugin.loader,
+             loader: MiniCssExtractPlugin.loader, 
              options: {
                publicPath: "./",
              },
            },
-          //  "style-loader",
            "css-loader",
-         ]
+           "sass-loader",
+         ],
         },
         {
          test: /\.html$/i,
