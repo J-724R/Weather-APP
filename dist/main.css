@@ -229,19 +229,6 @@ html{
 /*!********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main.scss ***!
   \********************************************************************************************************/
-* {
-  color: rgb(255, 255, 255);
-}
-
-body {
-  background: rgb(32, 158, 255);
-  background: linear-gradient(0deg, rgb(32, 158, 255) 10%, rgb(48, 217, 246) 100%);
-}
-
-svg {
-  fill: aliceblue;
-}
-
 .weather_info,
 .weather_forecast {
   background-color: rgba(19, 41, 61, 0.0666666667);
@@ -249,15 +236,14 @@ svg {
 }
 
 .extra_info {
-  border-left: rgba(19, 41, 61, 0.2078431373) solid 2px;
   justify-content: space-evenly;
 }
 .extra_info img {
   height: 40px;
   width: auto;
-  filter: invert(100%) sepia(25%) saturate(4439%) hue-rotate(178deg) brightness(103%) contrast(107%);
 }
 
+.search_form > button,
 .extra_info_button,
 .forecast_option {
   cursor: pointer;
@@ -271,4 +257,9 @@ svg {
 .basic_info svg {
   height: 75px;
   width: auto;
+}
+
+#searchbox {
+  color: rgba(19, 41, 61, 0.462745098);
+  font-weight: 550;
 }

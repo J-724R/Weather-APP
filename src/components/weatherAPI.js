@@ -21,7 +21,10 @@ const API = (() => {
         try {
             const requestCoordinates =  await 
             fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${location},${country}&limit=1&appid=${Key}`,
-            { method: "GET" }
+            { 
+              mode: 'cors',
+              method: "GET" 
+            }
             );
             const coordinates = await requestCoordinates.json();
             printCoordinates(coordinates);
@@ -36,7 +39,10 @@ const API = (() => {
         try {
             const requestWeather = await
                 fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates[0].lat}&lon=${coordinates[0].lon}&exclude=minutely&units=${units}&appid=${Key}`,
-                { method: "GET" }
+                { 
+                  mode: 'cors',
+                  method: "GET" 
+                }
             );
             const weather = await requestWeather.json();
             printData(weather);

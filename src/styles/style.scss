@@ -1,15 +1,15 @@
 *{
-   color: rgb(255, 255, 255);
+//    color: rgb(255, 255, 255);
 //    outline: red solid 1px;
 }
 
-body{
-    background: rgb(32,158,255);
-    background: linear-gradient(0deg, rgba(32,158,255,1) 10%, rgba(48,217,246,1) 100%);
-}
+// body{
+//     background: rgb(32,158,255);
+//     background: linear-gradient(0deg, rgba(32,158,255,1) 10%, rgba(48,217,246,1) 100%);
+// }
 
 svg{
-    fill: aliceblue;
+    // fill: aliceblue;
 }
 
 .weather_info,
@@ -19,16 +19,17 @@ svg{
 }
 
 .extra_info {
- border-left: #13293d35 solid 2px;
+//  border-left: #13293d35 solid 2px;
  justify-content: space-evenly;
 
     img{
         height: 40px;
         width: auto;
-        filter: invert(100%) sepia(25%) saturate(4439%) hue-rotate(178deg) brightness(103%) contrast(107%);
+        // filter: invert(100%) sepia(25%) saturate(4439%) hue-rotate(178deg) brightness(103%) contrast(107%);
     }
 }
 
+.search_form > button,
 .extra_info_button,
 .forecast_option{
     cursor: pointer;
@@ -48,3 +49,7 @@ svg{
     }
 }
 
+#searchbox{
+    color: #13293d76;
+    font-weight: 550;
+}
