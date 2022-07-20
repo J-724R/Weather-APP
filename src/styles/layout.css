@@ -9,7 +9,7 @@ html{
 }
 
 .main_container{
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -67,10 +67,6 @@ html{
     height: inherit;
  }
 
- .weather_details_icon > img {
-      /* width: auto; */
-}
-
  .basic_info,
  .extra_info{
     display: flex;
@@ -83,13 +79,14 @@ html{
  }
 
  .basic_info{
-   /* justify-content: space-between; */
+   width: 70%;
  }
 
  .basic_info > .wrapper {
    display: flex;
    justify-content: center;
    align-items: center;
+   gap: 25px;
    height: 45%;
    width: 90%;
    margin: 15px 0px;
@@ -132,7 +129,8 @@ html{
    width: 45vw;
    display: flex;
    flex-flow: column;
-   height: 90vh;
+   min-height: fit-content;
+   max-height: 90vh;
    border-radius: 15px;
    overflow: hidden;
 }
@@ -153,7 +151,7 @@ html{
   }
 
  .forecast_info_container{
-   height: 500px;
+   height: fit-content;
    overflow-y: scroll;
  }
 

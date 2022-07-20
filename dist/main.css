@@ -12,7 +12,7 @@ html{
 }
 
 .main_container{
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -70,10 +70,6 @@ html{
     height: inherit;
  }
 
- .weather_details_icon > img {
-      /* width: auto; */
-}
-
  .basic_info,
  .extra_info{
     display: flex;
@@ -86,13 +82,14 @@ html{
  }
 
  .basic_info{
-   /* justify-content: space-between; */
+   width: 70%;
  }
 
  .basic_info > .wrapper {
    display: flex;
    justify-content: center;
    align-items: center;
+   gap: 25px;
    height: 45%;
    width: 90%;
    margin: 15px 0px;
@@ -135,7 +132,8 @@ html{
    width: 45vw;
    display: flex;
    flex-flow: column;
-   height: 90vh;
+   min-height: fit-content;
+   max-height: 90vh;
    border-radius: 15px;
    overflow: hidden;
 }
@@ -156,7 +154,7 @@ html{
   }
 
  .forecast_info_container{
-   height: 500px;
+   height: fit-content;
    overflow-y: scroll;
  }
 
@@ -240,38 +238,37 @@ body {
   background: linear-gradient(0deg, rgb(32, 158, 255) 10%, rgb(48, 217, 246) 100%);
 }
 
+svg {
+  fill: aliceblue;
+}
+
 .weather_info,
 .weather_forecast {
   background-color: rgba(19, 41, 61, 0.0666666667);
   box-shadow: 0px 5px 8px 0px rgba(19, 41, 61, 0.25);
 }
 
-.forecast_info_container ::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-.forecast_info_container ::-webkit-scrollbar-thumb {
-  background: transparent;
-}
-.forecast_info_container ::-webkit-scrollbar-track {
-  background: transparent;
-}
-.forecast_info_container ::-webkit-scrollbar-button {
-  background: transparent;
-}
-
-svg {
-  fill: aliceblue;
-}
-
 .extra_info {
   border-left: rgba(19, 41, 61, 0.2078431373) solid 2px;
+  justify-content: space-evenly;
 }
 .extra_info img {
+  height: 40px;
+  width: auto;
   filter: invert(100%) sepia(25%) saturate(4439%) hue-rotate(178deg) brightness(103%) contrast(107%);
 }
 
 .extra_info_button,
 .forecast_option {
   cursor: pointer;
+}
+
+.forecast_info_container svg {
+  height: 40px;
+  width: auto;
+}
+
+.basic_info svg {
+  height: 75px;
+  width: auto;
 }
