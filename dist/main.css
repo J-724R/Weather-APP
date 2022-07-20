@@ -27,7 +27,7 @@ html{
  border-radius: 15px;
  overflow: hidden; 
  min-height: 325px;
- width: max(32vw, 350px);  
+ width: max(35vw, 350px);  
 }
  
  .search_bar > form{
@@ -35,7 +35,7 @@ html{
     flex-flow: row;
     justify-content: center;
     align-items: center;
-    padding: 5px 10px;
+    padding: 10px 10px;
  }
 
  .search_form > input{
@@ -85,11 +85,15 @@ html{
     padding-top: 8px;
  }
 
+ .basic_info{
+   /* justify-content: space-between; */
+ }
+
  .basic_info > .wrapper {
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 35%;
+   height: 45%;
    width: 90%;
    margin: 15px 0px;
  }
@@ -152,8 +156,12 @@ html{
   }
 
  .forecast_info_container{
-   height: fit-content;
+   height: 500px;
    overflow-y: scroll;
+ }
+
+ .forecast_info_container::-webkit-scrollbar{
+   width: 0px;
  }
 
  .forecast_Header,
@@ -266,8 +274,4 @@ svg {
 .extra_info_button,
 .forecast_option {
   cursor: pointer;
-}
-
-* {
-  outline: red solid 1px;
 }
