@@ -22,8 +22,6 @@ function nameShortener (name){
     return NewName;
 }
 
-console.log(nameShortener('Bogota Capital District - Department'))
-
 function loadDefaultCoords(){
     weather.load('Miami', 'US', "metric");
 }
@@ -42,8 +40,11 @@ async function loadCustomCoords(position){
     console.log(data[0].country);
 }
 
-navigator.geolocation.getCurrentPosition(loadCustomCoords, loadDefaultCoords);
-
+try{
+    navigator.geolocation.getCurrentPosition(loadCustomCoords, loadDefaultCoords);
+}catch{
+    prompt("Please enable location services");
+}
 
 console.log(`\n\n\n`);
 
