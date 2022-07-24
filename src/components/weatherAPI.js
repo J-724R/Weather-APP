@@ -20,7 +20,7 @@ const API = (() => {
     async function getCoordinates(location, country, units){
         try {
             const requestCoordinates =  await 
-            fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${location},${country}&limit=1&appid=${Key}`,
+            fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${location},${country}&limit=1&appid=${Key}`,
             { 
               mode: 'cors',
               method: "GET" 
@@ -136,7 +136,7 @@ const API = (() => {
     async function reverseGeocode(coordinates){
         try {
           const reverseLocation = await 
-            fetch (`http://api.openweathermap.org/geo/1.0/reverse?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${Key}`
+            fetch (`https://api.openweathermap.org/geo/1.0/reverse?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${Key}`
           );
           const location = await reverseLocation.json();
 
