@@ -1,7 +1,6 @@
 import './main.scss';
 import API from './components/weatherAPI';
 import { weather, UI } from './components/eventHandlers.js';
-import _ from 'lodash';
 // require('../src/main.scss');
 
 UI.toggleForecast();
@@ -39,6 +38,7 @@ async function loadCustomCoords(position){
     console.log(city);
     console.log(data[0].country);
 }
+
 
 try{
     navigator.geolocation.getCurrentPosition(loadCustomCoords, loadDefaultCoords);

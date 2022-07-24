@@ -8,7 +8,6 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: '[name][ext]',
   },
   module: {
     rules: [
@@ -46,14 +45,16 @@ module.exports = {
         {
          test: /\.(svg|jpg|jpeg|gif|png)$/i,
          type: 'asset/resource',
-         use: {
+         use: [{
           loader: 'file-loader',
           options: {
               name: '[name].[ext]',
               outputPath: 'assets',
               publicPath: 'assets',
           }
-        }
+         },
+         "image-webpack-loader"
+        ],
         },
         {
          test: /\.(woff|woff2|eot|ttf|otf)$/i,
