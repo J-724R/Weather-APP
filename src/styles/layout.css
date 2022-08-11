@@ -83,7 +83,7 @@ body{
     gap: 8px;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 8px;
+    padding-top: 6px;
  }
 
  .basic_info{
@@ -97,7 +97,7 @@ body{
    gap: 25px;
    height: 45%;
    width: 90%;
-   margin: 15px 0px;
+   margin: 10px 0px;
  }
 
  .extra_info {

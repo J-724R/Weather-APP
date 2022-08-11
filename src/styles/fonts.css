@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'fengardo_neueregular';
+  src: url('./Fonts/Neue/fengardoneue_regular-webfont.woff2') format('woff2'),
+       url('./Fonts/Neue/fengardoneue_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'fengardo_neueblack';
+  src: url('./Fonts/Neue/fengardoneue_black-webfont.woff2') format('woff2'),
+       url('./Fonts/Neue/fengardoneue_black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+*{
+  font-family: fengardo_neueregular;
+}
+
+.weather_details_label.title{
+  font-size: 14px;
+}
+
+.title{
+  font-weight: 650;
+}

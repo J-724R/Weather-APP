@@ -1,3 +1,6 @@
+/*!*************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/layout.css ***!
+  \*************************************************************************/
 *{
     box-sizing: border-box;
 }
@@ -83,7 +86,7 @@ body{
     gap: 8px;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 8px;
+    padding-top: 6px;
  }
 
  .basic_info{
@@ -97,7 +100,7 @@ body{
    gap: 25px;
    height: 45%;
    width: 90%;
-   margin: 15px 0px;
+   margin: 10px 0px;
  }
 
  .extra_info {
@@ -232,4 +235,84 @@ body{
       width: 85vw;
    }
 }
-*{color:#fff}svg{fill:#f0f8ff}.weather_info,.weather_forecast{background-color:rgba(19,41,61,.1450980392);box-shadow:0px 5px 8px 0px rgba(19,41,61,.25)}.extra_info{justify-content:space-evenly}.extra_info img{height:40px;width:auto;filter:invert(100%) sepia(25%) saturate(4439%) hue-rotate(178deg) brightness(103%) contrast(107%)}.search_form>button,.extra_info_button,.forecast_option{cursor:pointer}.forecast_info_container svg{height:40px;width:auto}.basic_info{font-weight:550}.basic_info svg{height:75px;width:auto}#searchbox{color:rgba(19,41,61,.462745098);font-weight:550}
+/*!************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/fonts.css ***!
+  \************************************************************************/
+@font-face {
+  font-family: 'fengardo_neueregular';
+  src: url(./fengardoneue_regular-webfont.woff2) format('woff2'),
+       url(./fengardoneue_regular-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'fengardo_neueblack';
+  src: url(./fengardoneue_black-webfont.woff2) format('woff2'),
+       url(./fengardoneue_black-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+*{
+  font-family: fengardo_neueregular;
+}
+
+.weather_details_label.title{
+  font-size: 14px;
+}
+
+.title{
+  font-weight: 650;
+}
+/*!********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main.scss ***!
+  \********************************************************************************************************/
+* {
+  color: rgb(255, 255, 255);
+}
+
+svg {
+  fill: aliceblue;
+}
+
+.weather_info,
+.weather_forecast {
+  background-color: rgba(3, 48, 91, 0.1450980392);
+  box-shadow: 0px 5px 8px 0px rgba(19, 41, 61, 0.25);
+}
+
+.extra_info {
+  justify-content: space-evenly;
+}
+.extra_info img {
+  height: 40px;
+  width: auto;
+  filter: invert(100%) sepia(25%) saturate(4439%) hue-rotate(178deg) brightness(103%) contrast(107%);
+}
+
+.search_form > button,
+.extra_info_button,
+.forecast_option {
+  cursor: pointer;
+}
+
+.forecast_info_container svg {
+  height: 40px;
+  width: auto;
+}
+
+.basic_info {
+  font-weight: 550;
+}
+.basic_info svg {
+  height: 75px;
+  width: auto;
+}
+
+#searchbox {
+  color: rgba(19, 41, 61, 0.462745098);
+  font-weight: 550;
+}
