@@ -2,13 +2,12 @@
    color: rgb(255, 255, 255);
 }
 
-// body{
-//     background: rgb(32,158,255);
-//     background: linear-gradient(0deg, rgba(32,158,255,1) 10%, rgba(48,217,246,1) 100%);
-// }
-
 svg{
     fill: aliceblue;
+}
+
+img {
+    filter: invert(100%) sepia(25%) saturate(4439%) hue-rotate(178deg) brightness(103%) contrast(107%);
 }
 
 .weather_info,
@@ -18,13 +17,11 @@ svg{
 }
 
 .extra_info {
-//  border-left: #13293d35 solid 2px;
- justify-content: space-evenly;
+    justify-content: space-evenly;
 
     img{
         height: 40px;
         width: auto;
-        filter: invert(100%) sepia(25%) saturate(4439%) hue-rotate(178deg) brightness(103%) contrast(107%);
     }
 }
 
