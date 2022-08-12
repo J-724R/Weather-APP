@@ -236,7 +236,7 @@ body{
 
 @media (max-width: 680px){
    .weather_info{
-      width: 85vw;
+      width: 94vw;
    }
 }
 /*!************************************************************************!*\
@@ -270,6 +270,12 @@ body{
 
 .title{
   font-weight: 650;
+}
+
+.weather_info{
+  .search_bar{
+
+  }
 }
 /*!********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main.scss ***!
@@ -311,9 +317,6 @@ img {
   width: auto;
 }
 
-.basic_info {
-  font-weight: 550;
-}
 .basic_info svg {
   height: 75px;
   width: auto;

@@ -1,7 +1,3 @@
-*{
-   color: rgb(255, 255, 255);
-}
-
 svg{
     fill: aliceblue;
 }
@@ -39,7 +35,6 @@ img {
 }
 
 .basic_info{
-    font-weight: 550;
     svg{
         height: 75px;
         width: auto;
@@ -50,3 +45,40 @@ img {
     color: #13293d76;
     font-weight: 550;
 }
+
+
+
+
+
+
+.weather_info{
+    .search_bar{
+  
+    }
+  
+    .main_info_container{
+  
+    }
+  
+    .extra_info{
+  
+    }
+  }
+  
+  .extra_info_button{
+  
+  }
+  
+  .weather_forecast{
+    .forecast_options{
+  
+    }
+  
+    .forecast_Header{
+  
+    }
+  
+    .forecast_info_container{
+      
+    }
+  }
