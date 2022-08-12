@@ -260,30 +260,50 @@ body{
 }
 
 
+
 *{
+  color: rgb(255, 255, 255);
   font-family: fengardo_neueregular;
 }
 
-.weather_details_label.title{
-  font-size: 14px;
-}
-
-.title{
-  font-weight: 650;
-}
-
+/* Main container*/
 .weather_info{
+}
   .search_bar{
 
   }
+
+  .main_info_container{
+
+  }
+
+  .extra_info{
+
+  }
+
+
+/* Extra Button */
+.extra_info_button{
+  
 }
+
+/* Full forecast*/
+.weather_forecast{
+}
+  .forecast_options{
+
+  }
+
+  .forecast_Header{
+
+  }
+
+  .forecast_info_container{
+    
+  }
 /*!********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main.scss ***!
   \********************************************************************************************************/
-* {
-  color: rgb(255, 255, 255);
-}
-
 svg {
   fill: aliceblue;
 }

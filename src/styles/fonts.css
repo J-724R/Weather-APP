@@ -15,27 +15,16 @@
   font-style: normal;
 }
 
-*{
-  color: rgb(255, 255, 255);
-}
+
 
 *{
+  color: rgb(255, 255, 255);
   font-family: fengardo_neueregular;
 }
 
-.weather_details_label.title{
-  font-size: 14px;
-}
-
-.title{
-  font-weight: 650;
-}
-
-
-
-
-
+/* Main container*/
 .weather_info{
+}
   .search_bar{
 
   }
@@ -47,13 +36,16 @@
   .extra_info{
 
   }
-}
 
+
+/* Extra Button */
 .extra_info_button{
-
+  
 }
 
+/* Full forecast*/
 .weather_forecast{
+}
   .forecast_options{
 
   }
@@ -65,4 +57,3 @@
   .forecast_info_container{
     
   }
-}
