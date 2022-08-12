@@ -2,10 +2,6 @@ svg{
     fill: aliceblue;
 }
 
-img {
-    filter: invert(100%) sepia(25%) saturate(4439%) hue-rotate(178deg) brightness(103%) contrast(107%);
-}
-
 .weather_info,
 .weather_forecast {
     background-color: #03305b25;
@@ -18,6 +14,7 @@ img {
     img{
         height: 40px;
         width: auto;
+        filter: invert(100%) sepia(25%) saturate(4439%) hue-rotate(178deg) brightness(103%) contrast(107%);
     }
 }
 

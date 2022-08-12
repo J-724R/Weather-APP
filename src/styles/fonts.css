@@ -22,6 +22,10 @@
   font-family: fengardo_neueregular;
 }
 
+.title{
+  font-weight: 680;
+}
+
 /* Main container*/
 .weather_info{
 }
@@ -33,9 +37,20 @@
 
   }
 
-  .extra_info{
+    .location.title{
+      text-align: center;
+    }
 
+    .date{
+      font-size: 14px;
+    }
+
+  .extra_info{
   }
+
+    .weather_details > div{
+      font-size: 14px;
+    }
 
 
 /* Extra Button */

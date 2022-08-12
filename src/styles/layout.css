@@ -80,7 +80,6 @@ body{
     display: flex;
     flex-flow: column;
     flex: auto;
-    gap: 8px;
     justify-content: flex-start;
     align-items: center;
     padding-top: 6px;

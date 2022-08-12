@@ -83,7 +83,6 @@ body{
     display: flex;
     flex-flow: column;
     flex: auto;
-    gap: 8px;
     justify-content: flex-start;
     align-items: center;
     padding-top: 6px;
@@ -266,6 +265,10 @@ body{
   font-family: fengardo_neueregular;
 }
 
+.title{
+  font-weight: 680;
+}
+
 /* Main container*/
 .weather_info{
 }
@@ -277,9 +280,20 @@ body{
 
   }
 
-  .extra_info{
+    .location.title{
+      text-align: center;
+    }
 
+    .date{
+      font-size: 14px;
+    }
+
+  .extra_info{
   }
+
+    .weather_details > div{
+      font-size: 14px;
+    }
 
 
 /* Extra Button */
@@ -308,10 +322,6 @@ svg {
   fill: aliceblue;
 }
 
-img {
-  filter: invert(100%) sepia(25%) saturate(4439%) hue-rotate(178deg) brightness(103%) contrast(107%);
-}
-
 .weather_info,
 .weather_forecast {
   background-color: rgba(3, 48, 91, 0.1450980392);
@@ -324,6 +334,7 @@ img {
 .extra_info img {
   height: 40px;
   width: auto;
+  filter: invert(100%) sepia(25%) saturate(4439%) hue-rotate(178deg) brightness(103%) contrast(107%);
 }
 
 .search_form > button,
