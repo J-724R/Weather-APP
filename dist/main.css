@@ -224,6 +224,10 @@ body{
       width: 60vw;
    }
 
+   .extra_info_button > svg{
+      transform: rotate(90deg);
+   }
+
    .weather_forecast{
       width: 90vw;
       height: 65vh;
